@@ -1,15 +1,3 @@
-// describe('GitHub profile finder', function() {
-//   it('finds profiles', function() {
-//     browser.get('http://localhost:8080');
-
-//     element(by.model('searchCtrl.searchTerm')).sendKeys('spike01');
-//     element(by.className('btn')).click();
-
-//     expect(element(by.binding('user.login')).getText()).
-//         toEqual('spike01');
-//   });
-// });
-
 describe('GitHub profile finder', function() {
 
   var searchBox = element(by.model('searchCtrl.searchTerm'))
@@ -24,19 +12,19 @@ describe('GitHub profile finder', function() {
   });
 
   it('finds profiles', function() {
-    searchBox.sendKeys('spike01');
+    searchBox.sendKeys('spike');
     searchButton.click();
 
     var profiles = element.all(by.repeater('user in searchCtrl.searchResult.items'));
-    expect(profiles.get(0).getText()).toEqual('spike01');
+    expect(profiles.get(0).getText()).toContain('spike');
   });
 
   it('finds the last Spike', function() {
-    searchBox.sendKeys('spike01');
+    searchBox.sendKeys('spike');
     searchButton.click();
 
     var profiles = element.all(by.repeater('user in searchCtrl.searchResult.items'));
-    expect(profiles.last().getText()).toEqual('spike01');
+    expect(profiles.last().getText()).toContain('spike');
   });
 
 });

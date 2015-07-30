@@ -12,12 +12,7 @@ githubUserSearch.controller('GitUserSearchController', ['Search', function(Searc
       })
     }
     if (self.searchTerm === '') {
-      self.searchResult = { items: [
-      {
-        "login": "oi you!",
-        "avatar_url": "http://cf.juggle-images.com/matte/white/280x280/batman-19-logo-primary.jpg",
-        "html_url": "https://google.com/"
-      }] };
+      self.searchResult = null
     }
   };
 }]);

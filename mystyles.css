@@ -1,0 +1,38 @@
+.navbar-brand {
+/*  position: relative;
+  left: -2em;*/
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.searched-for {
+  position: relative;
+  left: 8em;
+  padding-top: 2em;
+  padding-bottom: 3.5em;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #337ab7;
+}
+
+.list-group {
+  position: relative;
+  left: 11em;
+}
+
+.picture {
+  border-radius: 0.4em;
+}
+
+.name {
+  padding-left: 2em;
+  font-size: 1.3em;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
